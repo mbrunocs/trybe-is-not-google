@@ -1,5 +1,3 @@
-import sys
-from ting_file_management.file_management import txt_importer
 from ting_file_management.queue import Queue
 
 
@@ -18,7 +16,7 @@ def exists_word(word: str, instance: Queue):
                     "linha": idx + 1
                 })
         if len(model["ocorrencias"]) > 0:
-            match.append(model) 
+            match.append(model)
             model["ocorrencias"] = list()
     return match if len(match) > 0 else []
 
@@ -39,6 +37,6 @@ def search_by_word(word: str, instance: Queue):
                     "conteudo": string,
                 })
         if len(model["ocorrencias"]) > 0:
-            match.append(model) 
+            match.append(model)
             model["ocorrencias"] = list()
     return match if len(match) > 0 else []
